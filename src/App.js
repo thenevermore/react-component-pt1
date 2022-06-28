@@ -1,23 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
+import ButtonClass from './components/ButtonClass';
+import ButtonFunction from './components/ButtonFunction';
 
 function App() {
+  const onClickHandler = (param) => {
+    alert(param);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div style={{ margin:"20px"}}>
+        <ButtonFunction text="I'm button function from props!" handler={() => onClickHandler("Lagu cinta")} /> 
+        <br />
+      </div>       
     </div>
   );
 }
